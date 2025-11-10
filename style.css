@@ -1,0 +1,238 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #F5F5F5;
+    color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra navegación */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff 0%;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-left {
+    color: #343c54;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-icon, .nav-text {
+    color: #343c54;
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-text {
+    font-size: 1.1rem;
+}
+
+/* Hover navegación */
+.nav-icon:hover, .nav-text:hover {
+    background: #fff;
+    color: #485efd;
+}
+
+/* Main content */
+.main-content {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65vh;
+    background: #F5F5F5;
+}
+
+.card-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    width: 310px;
+    min-width: 250px;
+    max-width: 95vw;
+    box-shadow: 0 4px 30px rgba(60,60,60,0.12), 0 1.5px 7px rgba(60,60,60,0.12);
+    transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #343c54;
+}
+
+/* Hovers cards */
+.card:hover {
+    transform: translateY(-9px) scale(1.04);
+    box-shadow: 0 10px 36px rgba(80,82,200,0.18), 0 4px 16px rgba(60,60,60,0.19);
+    border: 2px solid #3a66e1;
+}
+
+.card-basic { border-color: #b1d572; }
+.card-basic:hover { border-color: #8bbf36; }
+.card-profesional { border-color: #8884d8; }
+.card-profesional:hover { border-color: #7252c0; }
+.card-actual { border-color: #4fc2f7; }
+.card-actual:hover { border-color: #2298df; }
+
+/* Contacto */
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 1rem;
+    background: #F5F5F5;
+    min-height: 340px;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 2rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(60,60,60,0.11);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 7px;
+    border: 1px solid #ccd6f6;
+    font-size: 1rem;
+    resize: none;
+    transition: border 0.15s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border: 1.8px solid #2882e1;
+    outline: none;
+}
+
+.contact-form button {
+    margin-top: 1rem;
+    padding: 0.65rem;
+    background: linear-gradient(90deg, #485efd 0%, #4fc2f7 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contact-form button:hover {
+    background: #4fc2f7;
+    color: #222;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: #ffffff;
+    color: #343c54;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.4px;
+    position: relative;
+}
+
+/* Responsive design */
+@media (max-width: 1050px) {
+    .card-container {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .main-content {
+        min-height: 58vh;
+    }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .navbar-left {
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+   .main-content {
+        min-height: 36vh;
+        padding: 0 0.1rem;
+    }
+    .footer {
+        font-size: 1rem;
+        padding: 0.7rem 0;
+    }
+}

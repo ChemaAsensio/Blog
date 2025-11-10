@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Chema</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos CDN: Puedes usar por ejemplo Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="navbar-left">Blog de Chema</div>
+        <div class="navbar-right">
+            <a href="index.html" class="nav-icon" title="Home"><i class="fas fa-home"></i></a>
+            <a href="#contacto" class="nav-text">Contacto</a>
+            <a href="www.linkedin.com/in/jose-m-asensio-seseña" target="_blank" class="nav-icon" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </nav>
+
+    <!-- Tarjetas centrales -->
+    <main class="main-content">
+        <div class="card-container">
+            <a href="articulo1.html" class="card card-basic">
+                <img src="https://actions.es/wp-content/uploads/2021/01/bigdata2-1.jpg" alt="Articulo 1">
+                <div class="card-body">
+                    <h3>La importancia de los Datos</h3>
+                    <p>¿Tenemos nuestros datos bien protegidos?</p>
+                </div>
+            </a>
+            <a href="articulo2.html" class="card card-profesional">
+                <img src="https://ecstech.com/wp-content/uploads/2025/05/data-swamp-new-1.png" alt="Articulo 2">
+                <div class="card-body">
+                    <h3>data lake o data swamp</h3>
+                    <p>¿Hacemos un buen mantenimiento de nuestros datos?</p>
+                </div>
+            </a>
+            <a href="articulo3.html" class="card card-actual">
+                <img src="https://img.freepik.com/vector-gratis/coleccion-elementos-tablero_23-2148384408.jpg?semt=ais_hybrid&w=740&q=80" alt="Articulo 3">
+                <div class="card-body">
+                    <h3>Data Analyst</h3>
+                    <p>Buenas prácticas en un analisis de datos</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto" class="contact-form-section">
+        <form class="contact-form">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required maxlength="100">
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9 ]+" maxlength="20">
+
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" required maxlength="100">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="6" maxlength="1000" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Diseñado con ♥️ por Jose Mª Asensio Seseña
+    </footer>
+</body>
+</html>
