@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -116,15 +117,8 @@ body {
 .card:hover {
     transform: translateY(-9px) scale(1.04);
     box-shadow: 0 10px 36px rgba(80,82,200,0.18), 0 4px 16px rgba(60,60,60,0.19);
-    border: 2px solid #3a66e1;
+    border: 2px solid #343c54;
 }
-
-.card-basic { border-color: #b1d572; }
-.card-basic:hover { border-color: #8bbf36; }
-.card-profesional { border-color: #8884d8; }
-.card-profesional:hover { border-color: #7252c0; }
-.card-actual { border-color: #4fc2f7; }
-.card-actual:hover { border-color: #2298df; }
 
 /* Contacto */
 .contact-form-section {
